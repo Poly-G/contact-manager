@@ -1,15 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Contact extends Component {
-  render() {
-    return (
+const Contact = props => {
+  return (
       <div className="card card-body mb-3">
-        <h4>John Doe</h4>
-        <ul className="list-group">
-            <li className="list-group-item">Email: jdoe@gmail.com</li>
-            <li className="list-group-item">Phone: 555-555-5555</li>
-        </ul>
+          <h4>{props.name}</h4>
+          <ul className="list-group">
+              <li className="list-group-item">Email: {props.email}</li>
+              <li className="list-group-item">Phone: {props.phone}</li>
+          </ul>
       </div>
-    )
-  }
+  )
 }
+
+export default Contact
+

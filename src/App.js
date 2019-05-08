@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
-import Contact from './components/Contact';
+import Contacts from './components/Contacts';
 import Header from './components/Header';
 
 
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
-        <Contact />
+        <Contacts />
       </div>
     </div>
   );
