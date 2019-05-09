@@ -1,15 +1,24 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-const Contact = props => {
-  return (
-      <div className="card card-body mb-3">
-          <h4>{props.name}</h4>
-          <ul className="list-group">
-              <li className="list-group-item">Email: {props.email}</li>
-              <li className="list-group-item">Phone: {props.phone}</li>
-          </ul>
-      </div>
-  )
+class Contact extends Component {
+
+onShowClick = () => {
+    console.log('works')
+}
+
+  render(){
+    const {name, email, phone} = this.props.contact;
+
+      return (
+          <div className="card card-body mb-3">
+              <h4>{name} <i onClick={this.onShowClick} className="fas fa-sort-down" /> </h4>
+              <ul className="list-group">
+                  <li className="list-group-item">Email: {email}</li>
+                  <li className="list-group-item">Phone: {phone}</li>
+              </ul>
+          </div>
+      )
+  }
 }
 
 export default Contact
