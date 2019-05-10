@@ -1,9 +1,14 @@
 import React, {Component} from 'react'
 
 class Contact extends Component {
+    state = {
+        showContactInfo: true
+    }
 
 onShowClick = () => {
-    console.log('works')
+    this.setState({
+        showContactInfo: !this.state.showContactInfo
+    })
 }
 
   render(){
