@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 class Contact extends Component {
     state = {
-        showContactInfo: true
+        showContactInfo: false
     }
 
 onShowClick = () => {
