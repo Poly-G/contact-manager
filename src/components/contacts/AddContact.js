@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Consumer } from '../../context';
 import uuid from 'uuid';
 
+import TextInputGroup from '../layout/TextInputGroup';
+
 class AddContact extends Component {
     state = {
         name: '',
@@ -50,41 +52,29 @@ class AddContact extends Component {
                             <div className="card-body">
                                 <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                                     {/* Name input */}
-                                    <div className="form-group">
-                                        <label htmlFor="name">Name</label>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            className="form-control form-control-lg"
-                                            placeholder="Enter Name..."
-                                            value={name}
-                                            onChange={this.onChange}
-                                        />
-                                    </div>
+                                    <TextInputGroup 
+                                        label="Name"
+                                        name="name"
+                                        placeholder="Enter Name..."
+                                        value={name}
+                                        onChange={this.onChange}
+                                    />
                                     {/* Email input */}
-                                    <div className="form-group">
-                                        <label htmlFor="email">Email</label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            className="form-control form-control-lg"
-                                            placeholder="Enter email..."
-                                            value={email}
-                                            onChange={this.onChange}
-                                        />
-                                    </div>
+                                    <TextInputGroup
+                                        label="Email"
+                                        name="email"
+                                        placeholder="Enter Email..."
+                                        value={email}
+                                        onChange={this.onChange}
+                                    />
                                     {/* Phone number input */}
-                                    <div className="form-group">
-                                        <label htmlFor="Phone Number...">Phone Number</label>
-                                        <input
-                                            type="text"
-                                            name="phone"
-                                            className="form-control form-control-lg"
-                                            placeholder="Enter Phone Number"
-                                            value={phone}
-                                            onChange={this.onChange}
-                                        />
-                                    </div>
+                                    <TextInputGroup
+                                        label="Phone"
+                                        name="phone"
+                                        placeholder="Enter Phone Number..."
+                                        value={phone}
+                                        onChange={this.onChange}
+                                    />
                                     {/* Submit input */}
                                     <input
                                         type="submit"
