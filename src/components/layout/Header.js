@@ -1,6 +1,8 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
+import { Link } from 'react-router-dom'
+
 
 const Header = () => {
   return (
@@ -11,8 +13,16 @@ const Header = () => {
             </a>
             <div>
                 <ul className="navbar-nav mr-auto">
-                    <li className="nav-item">
-                        <a href="/" className="nav-link">Home</a>
+                      <li className="nav-item row">
+                        <Link to="/" className="nav-link">
+                        <i className="fas fa-home"></i> Home
+                        </Link>
+                        <Link to="/contact/add" className="nav-link">
+                        <i className="fas fa-plus"></i> Add
+                        </Link>
+                        <Link to="/about" className="nav-link">
+                        <i className="fas fa-question"></i> About
+                        </Link>
                     </li>
                 </ul>
             </div>
