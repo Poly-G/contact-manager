@@ -9,6 +9,7 @@ import Header from './components/layout/Header';
 import Provider from './context';
 import AddContact from './components/contacts/AddContact';
 import About from './components/pages/About';
+import NotFound from './components/pages/NotFound';
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
               exact path="/about"
               component={About}
               />
-              
+              <Route component={NotFound}/>
             </Switch>
           </div>
         </div>
